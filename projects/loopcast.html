@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loopcast — Jordan Cruz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="pnav" aria-label="Primary">
+    <a href="../index.html#projects">← Back to projects</a>
+    <span class="pnav__logo">jc/</span>
+  </nav>
+
+  <header class="phero">
+    <span class="phero__tag">Design + Dev</span>
+    <h1>Loopcast</h1>
+    <p class="phero__sub">A podcast player concept with a focus on show notes and clip sharing, from wireframes to working prototype.</p>
+    <div class="phero__links">
+      <a class="btn btn--primary" href="#">View live ↗</a>
+      <a class="btn btn--ghost" href="#">View code ↗</a>
+    </div>
+  </header>
+
+  <div class="pbanner">
+    <div class="pbanner__shape" style="background:linear-gradient(135deg, var(--violet-dark), var(--mint));">
+      <span>loopcast · prototype</span>
+    </div>
+  </div>
+
+  <div class="pmeta">
+    <div class="pmeta__block"><strong>Role</strong><span>Designer & developer</span></div>
+    <div class="pmeta__block"><strong>Timeline</strong><span>4 weeks, 2023</span></div>
+    <div class="pmeta__block"><strong>Stack</strong><span>Figma, React</span></div>
+    <div class="pmeta__block"><strong>Status</strong><span>Prototype</span></div>
+  </div>
+
+  <main class="pbody">
+    <h2>Overview</h2>
+    <p>Loopcast is a concept podcast player built around a simple idea: show notes and timestamped clips deserve to be first-class citizens, not an afterthought buried in an app description.</p>
+
+    <h2>The problem</h2>
+    <p>Most podcast apps treat episode notes as static text and make clipping a moment nearly impossible. I wanted to explore what a player designed around sharing specific moments could look like.</p>
+
+    <h2>What I built</h2>
+    <p>I started in Figma with a full flow — browse, listen, clip, share — then built the core player and clip-sharing interaction as a working React prototype to test the timestamp-linking feature.</p>
+    <ul>
+      <li>Tap-to-clip moments with auto-generated shareable links</li>
+      <li>Interactive, timestamp-linked show notes</li>
+      <li>Custom waveform scrubber component</li>
+      <li>Full design system built in Figma before development</li>
+    </ul>
+
+    <h2>What I learned</h2>
+    <p>Working through the full design-to-prototype pipeline myself sharpened how I think about handoff — designing components with their eventual code structure already in mind.</p>
+  </main>
+
+  <nav class="pswitch">
+    <a class="prev" href="tablescraps.html"><span class="lbl">← Previous</span>Tablescraps</a>
+    <a class="next" href="commit-buddy.html"><span class="lbl">Next →</span>Commit Buddy</a>
+  </nav>
+
+  <footer style="margin-top:70px;">
+    designed &amp; built by Jordan Cruz · © <span id="year"></span>
+  </footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

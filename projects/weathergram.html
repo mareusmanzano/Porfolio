@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weathergram — Jordan Cruz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="pnav" aria-label="Primary">
+    <a href="../index.html#projects">← Back to projects</a>
+    <span class="pnav__logo">jc/</span>
+  </nav>
+
+  <header class="phero">
+    <span class="phero__tag">API</span>
+    <h1>Weathergram</h1>
+    <p class="phero__sub">A weather API wrapper with caching and rate-limit handling, used by three indie apps in production.</p>
+    <div class="phero__links">
+      <a class="btn btn--primary" href="#">View live ↗</a>
+      <a class="btn btn--ghost" href="#">View code ↗</a>
+    </div>
+  </header>
+
+  <div class="pbanner">
+    <div class="pbanner__shape" style="background:linear-gradient(135deg, #2FD8A3, var(--violet-dark));">
+      <span>weathergram · API architecture</span>
+    </div>
+  </div>
+
+  <div class="pmeta">
+    <div class="pmeta__block"><strong>Role</strong><span>Backend developer</span></div>
+    <div class="pmeta__block"><strong>Timeline</strong><span>3 weeks, 2023</span></div>
+    <div class="pmeta__block"><strong>Stack</strong><span>Python, FastAPI, Redis</span></div>
+    <div class="pmeta__block"><strong>Status</strong><span>Live, powering 3 apps</span></div>
+  </div>
+
+  <main class="pbody">
+    <h2>Overview</h2>
+    <p>Weathergram sits in front of a third-party weather provider and gives small indie apps a simpler, more reliable interface — with caching so nobody blows through their API quota.</p>
+
+    <h2>The problem</h2>
+    <p>A few indie developer friends kept hitting rate limits and inconsistent response shapes from raw weather APIs. Everyone was solving the same caching and normalization problem separately.</p>
+
+    <h2>What I built</h2>
+    <p>I built a FastAPI service that normalizes responses from multiple providers into one consistent schema, caches results in Redis with sensible TTLs based on forecast volatility, and gracefully falls back to a secondary provider if the primary one fails.</p>
+    <ul>
+      <li>Unified JSON schema across two upstream weather providers</li>
+      <li>Redis caching tuned per endpoint (current vs. 7-day forecast)</li>
+      <li>Automatic failover to a backup provider</li>
+      <li>Simple API-key based rate limiting for consumers</li>
+    </ul>
+
+    <h2>What I learned</h2>
+    <p>This project pushed me to think seriously about cache invalidation strategy and about designing an API contract that's stable even when the providers behind it change.</p>
+  </main>
+
+  <nav class="pswitch">
+    <a class="prev" href="routine.html"><span class="lbl">← Previous</span>Routine — habit tracker</a>
+    <a class="next" href="formly.html"><span class="lbl">Next →</span>Formly</a>
+  </nav>
+
+  <footer style="margin-top:70px;">
+    designed &amp; built by Jordan Cruz · © <span id="year"></span>
+  </footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

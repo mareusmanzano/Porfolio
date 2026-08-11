@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Routine — habit tracker — Jordan Cruz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="pnav" aria-label="Primary">
+    <a href="../index.html#projects">← Back to projects</a>
+    <span class="pnav__logo">jc/</span>
+  </nav>
+
+  <header class="phero">
+    <span class="phero__tag">Web App</span>
+    <h1>Routine — habit tracker</h1>
+    <p class="phero__sub">A minimal habit tracker with streaks, gentle reminders, and weekly insights — built to feel calm, not gamified.</p>
+    <div class="phero__links">
+      <a class="btn btn--primary" href="#">View live ↗</a>
+      <a class="btn btn--ghost" href="#">View code ↗</a>
+    </div>
+  </header>
+
+  <div class="pbanner">
+    <div class="pbanner__shape" style="background:linear-gradient(135deg, var(--violet), var(--coral));">
+      <span>routine · dashboard preview</span>
+    </div>
+  </div>
+
+  <div class="pmeta">
+    <div class="pmeta__block"><strong>Role</strong><span>Solo full-stack developer</span></div>
+    <div class="pmeta__block"><strong>Timeline</strong><span>6 weeks, 2024</span></div>
+    <div class="pmeta__block"><strong>Stack</strong><span>React, Node.js, PostgreSQL</span></div>
+    <div class="pmeta__block"><strong>Status</strong><span>Live, actively maintained</span></div>
+  </div>
+
+  <main class="pbody">
+    <h2>Overview</h2>
+    <p>Routine is a habit-tracking app for people who find most habit apps too noisy. Instead of badges, points, and leaderboards, it focuses on a single clean streak view and a short weekly reflection.</p>
+
+    <h2>The problem</h2>
+    <p>Most habit trackers lean heavily on gamification — streak-breaking anxiety, pop-up rewards, and constant notifications. I wanted something that felt more like a quiet journal than a game, while still giving useful structure and feedback.</p>
+
+    <h2>What I built</h2>
+    <p>I built a React front end with a single-page daily view, a Node.js/Express API, and PostgreSQL for storage. Habits can be marked done with one tap, and a lightweight weekly summary email (built with a cron job) recaps the week without demanding daily engagement.</p>
+    <ul>
+      <li>One-tap daily check-ins with optimistic UI updates</li>
+      <li>Streaks that soften rather than reset after a missed day</li>
+      <li>Weekly email digest generated server-side</li>
+      <li>Fully keyboard-accessible daily view</li>
+    </ul>
+
+    <h2>What I learned</h2>
+    <p>This was my first project designing against gamification patterns on purpose. It taught me a lot about writing UI copy that reduces pressure instead of adding it, and about structuring a Node API around a single, very frequent write operation efficiently.</p>
+  </main>
+
+  <nav class="pswitch">
+    <a class="prev" href="commit-buddy.html"><span class="lbl">← Previous</span>Commit Buddy</a>
+    <a class="next" href="weathergram.html"><span class="lbl">Next →</span>Weathergram</a>
+  </nav>
+
+  <footer style="margin-top:70px;">
+    designed &amp; built by Jordan Cruz · © <span id="year"></span>
+  </footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

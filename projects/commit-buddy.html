@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commit Buddy — Jordan Cruz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="pnav" aria-label="Primary">
+    <a href="../index.html#projects">← Back to projects</a>
+    <span class="pnav__logo">jc/</span>
+  </nav>
+
+  <header class="phero">
+    <span class="phero__tag">Tool</span>
+    <h1>Commit Buddy</h1>
+    <p class="phero__sub">A CLI that writes better commit messages by reading your staged diff and suggesting a summary.</p>
+    <div class="phero__links">
+      <a class="btn btn--primary" href="#">View live ↗</a>
+      <a class="btn btn--ghost" href="#">View code ↗</a>
+    </div>
+  </header>
+
+  <div class="pbanner">
+    <div class="pbanner__shape" style="background:linear-gradient(135deg, #1B1035, var(--violet));">
+      <span>commit-buddy · terminal tool</span>
+    </div>
+  </div>
+
+  <div class="pmeta">
+    <div class="pmeta__block"><strong>Role</strong><span>Creator</span></div>
+    <div class="pmeta__block"><strong>Timeline</strong><span>2 weeks, 2024</span></div>
+    <div class="pmeta__block"><strong>Stack</strong><span>Node.js, OpenAI API</span></div>
+    <div class="pmeta__block"><strong>Status</strong><span>Open source</span></div>
+  </div>
+
+  <main class="pbody">
+    <h2>Overview</h2>
+    <p>Commit Buddy is a small CLI tool that reads your staged git diff and suggests a clear, conventional-commit-style message — so you spend less time staring at the commit prompt.</p>
+
+    <h2>The problem</h2>
+    <p>Writing good commit messages is easy to skip when you're mid-flow, and 'wip' commits pile up fast. I wanted a fast, local tool that nudges toward better git hygiene without getting in the way.</p>
+
+    <h2>What I built</h2>
+    <p>Built as a Node.js CLI, it reads the staged diff via `git diff --cached`, sends a trimmed summary to the OpenAI API, and prints 2–3 suggested commit messages you can accept, edit, or discard entirely.</p>
+    <ul>
+      <li>Reads staged diffs directly from git, no extra setup</li>
+      <li>Suggests messages following conventional commit format</li>
+      <li>Fully optional — never commits without explicit confirmation</li>
+      <li>Configurable message style via a local config file</li>
+    </ul>
+
+    <h2>What I learned</h2>
+    <p>This project was a good, small exercise in designing a tool that assists rather than automates — every suggestion is a proposal the developer has to actively accept.</p>
+  </main>
+
+  <nav class="pswitch">
+    <a class="prev" href="loopcast.html"><span class="lbl">← Previous</span>Loopcast</a>
+    <a class="next" href="routine.html"><span class="lbl">Next →</span>Routine — habit tracker</a>
+  </nav>
+
+  <footer style="margin-top:70px;">
+    designed &amp; built by Jordan Cruz · © <span id="year"></span>
+  </footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

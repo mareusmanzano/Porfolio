@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formly — Jordan Cruz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="pnav" aria-label="Primary">
+    <a href="../index.html#projects">← Back to projects</a>
+    <span class="pnav__logo">jc/</span>
+  </nav>
+
+  <header class="phero">
+    <span class="phero__tag">Open Source</span>
+    <h1>Formly</h1>
+    <p class="phero__sub">A tiny, dependency-free form validation library with a friendly API and helpful error messages.</p>
+    <div class="phero__links">
+      <a class="btn btn--primary" href="#">View live ↗</a>
+      <a class="btn btn--ghost" href="#">View code ↗</a>
+    </div>
+  </header>
+
+  <div class="pbanner">
+    <div class="pbanner__shape" style="background:linear-gradient(135deg, var(--yellow), var(--coral));">
+      <span>formly · zero-dependency validation</span>
+    </div>
+  </div>
+
+  <div class="pmeta">
+    <div class="pmeta__block"><strong>Role</strong><span>Creator & maintainer</span></div>
+    <div class="pmeta__block"><strong>Timeline</strong><span>Ongoing since 2022</span></div>
+    <div class="pmeta__block"><strong>Stack</strong><span>TypeScript, Vite</span></div>
+    <div class="pmeta__block"><strong>Status</strong><span>Open source, 400+ weekly downloads</span></div>
+  </div>
+
+  <main class="pbody">
+    <h2>Overview</h2>
+    <p>Formly is a small TypeScript library for validating form input without pulling in a large dependency tree. It ships at under 3KB gzipped.</p>
+
+    <h2>The problem</h2>
+    <p>Most form validation libraries I reached for on small projects felt oversized for what I actually needed, and their error messages were often too generic to show directly to users.</p>
+
+    <h2>What I built</h2>
+    <p>I designed a chainable, readable validation API (`field('email').required().isEmail()`) with error messages you can actually put in a UI, plus full TypeScript types so mistakes get caught at compile time.</p>
+    <ul>
+      <li>Zero runtime dependencies, under 3KB gzipped</li>
+      <li>Fully typed, chainable validation rules</li>
+      <li>Human-readable, customizable error messages</li>
+      <li>Framework-agnostic — works with React, Vue, or plain JS</li>
+    </ul>
+
+    <h2>What I learned</h2>
+    <p>Maintaining an open-source library taught me a lot about API design under real constraints — once people depend on your interface, every change has to be backward compatible or clearly versioned.</p>
+  </main>
+
+  <nav class="pswitch">
+    <a class="prev" href="weathergram.html"><span class="lbl">← Previous</span>Weathergram</a>
+    <a class="next" href="tablescraps.html"><span class="lbl">Next →</span>Tablescraps</a>
+  </nav>
+
+  <footer style="margin-top:70px;">
+    designed &amp; built by Jordan Cruz · © <span id="year"></span>
+  </footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
